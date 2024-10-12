@@ -7,19 +7,21 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* custom scroll bar */
 ::-webkit-scrollbar {
-    width: 10px;
+    display: none;
 }
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
+/* ::-webkit-scrollbar-track {
+    background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
-}
+    background: #20EBA8;
+    border-radius: 5px;
+} */
 ::selection{
-  background: rgb(0,123,255,0.3);
+  color: white;
+  background-color: #20EBA8;
 }
+
 .content{
   max-width: 1250px;
   margin: auto;
@@ -33,9 +35,9 @@
   transition: all 0.3s ease;
 }
 .navbar.sticky{
-  background: #20EBA8;
+  background: #14ebbc;
   padding: 25px 40px;
-  box-shadow: 0px 3px 20px 0px rgb(30, 235, 167,0.3);
+  box-shadow: 0px 3px 60px 0px rgba(13, 136, 95, 0.3);
 }
 .navbar .content{
   display: flex;
@@ -43,12 +45,13 @@
   justify-content: space-between;
 }
 .navbar .logo a{
-  color: #20EBA8;
+  color: #fff;
   font-family: Garet;
   font-weight: bold;
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
+  user-select: none;
 }
 .navbar.sticky .logo a{
   color: #fff;
@@ -60,7 +63,7 @@
   list-style: none;
 }
 .menu-list li a{
-  color: #0d3829;
+  color: #fff;
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
@@ -74,14 +77,50 @@
   color: #fff;
 }
 .navbar.sticky .menu-list li a:hover{
-  color: #1f5c48;
+  color: #20EBA8;
 }
 .banner{
-  background: url("banner.jpg") no-repeat;
+  background: url("images/bgimage.jpg") no-repeat;
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment:fixed;
+  box-shadow: 0 0 5rem 0 inset #00000046;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12vh;
+}
+.banner .banner-left{
+  color: white;
+  width: 50%;
+}
+.banner-left h1{
+  font-size: 7vh;
+  margin: 70px 0px 5px 0px;
+}
+.banner-left p{
+  font-size: 4vh;
+  margin: 5px 0px;
+}
+.banner-left button{
+  border: none;
+  padding: 1.5rem 3.5rem;
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 3vh;
+  border-radius: 0.3rem;
+  background-color: white;
+  color: #05a07e;
+  transition: 0.3s ease-in-out;
+}
+.banner-left button:hover{
+  box-shadow: 0px 0px 40px 0px #ffffff3a;
+  cursor: pointer;
+  padding: 1.5rem 4rem;
+}
+.banner .banner-right{
+  width: 50%;
 }
 .about{
   padding: 30px 0;
@@ -126,7 +165,7 @@
   }
   .icon{
     display: block;
-    color: #0d3829;
+    color: #fff;
   }
   .icon.hide{
     display: none;
