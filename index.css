@@ -23,6 +23,7 @@
 }
 
 .content{
+  max-width: 1250px;
   margin: auto;
   padding: 0 30px;
 }
@@ -88,11 +89,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12vh;
+  padding: 25px 70px;
+  padding-top: 120px;
 }
 .banner .banner-left{
   color: white;
+  height: 100%;
   width: 50%;
+  display: block;
+}
+.banner .banner-right{
+  content:'';
+  height: 100%;
+  width: 50%;
+  display: block;
 }
 .banner-left h1{
   font-size: 7vh;
@@ -117,9 +127,6 @@
   box-shadow: 0px 0px 40px 0px #ffffff3a;
   cursor: pointer;
   padding: 1.5rem 4rem;
-}
-.banner .banner-right{
-  width: 50%;
 }
 .about{
   padding: 30px 0;
@@ -156,6 +163,12 @@
 @media (max-width: 900px) {
   .content{
     padding: 0 30px;
+  }
+  .banner .banner-right{
+    width: 0%;
+  }
+  .banner .banner-left{
+    width: 100%;
   }
 }
 @media (max-width: 868px) {
@@ -204,7 +217,18 @@
     color: white;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 450px) {
+  .banner-left{
+    text-align: center;
+  }
+  .banner-left h1{
+    font-size: 6vh;
+    text-align: center;
+  }
+  .banner-left p{
+    font-size: 3vh;
+    text-align: center;
+  }
   .navbar .logo a{
     font-size: 27px;
   }
