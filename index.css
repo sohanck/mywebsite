@@ -8,15 +8,15 @@
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    display: block;
 }
-/* ::-webkit-scrollbar-track {
-    background: #000000;
+::-webkit-scrollbar-track {
+    background: #00000000;
 }
 ::-webkit-scrollbar-thumb {
     background: #20EBA8;
     border-radius: 5px;
-} */
+}
 ::selection{
   color: white;
   background-color: #20EBA8;
