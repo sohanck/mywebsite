@@ -42,6 +42,7 @@
   -webkit-backdrop-filter: blur(30px); 
   backdrop-filter: blur(30px);
   padding: 30px 30px;
+/*   mask-image:linear-gradient(#fffffff1,#ffffff00); */
   border-image: linear-gradient(to right, #13835d 0%, #ffffff65 100%) 1;
   border-width: 2px;
   border-bottom-style: solid;
@@ -84,7 +85,12 @@
 .navbar.sticky .menu-list li a:hover{
   color: #20EBA8;
 }
-  /*background: url("banner.jpg") no-repeat;*/
+  
+
+/* BANNER STARTS HERE */
+
+
+/*background: url("banner.jpg") no-repeat;*/
 .banner{
   height: 100vh;
   max-height: 800px;
@@ -123,7 +129,8 @@
 .banner-left h2{
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 30px;
+  margin-bottom:-10px;
 }
 .banner-left h1{
     font-family: 'Space Grotesk', sans-serif;
@@ -160,6 +167,13 @@
   cursor: pointer;
   width:16.5rem;
 }
+
+
+
+/* BODY SECTION STARTS HERE */
+
+
+
 .about{
   padding: 30px 0;
     background-color: #001610;
@@ -184,6 +198,64 @@
   right: 30px;
   top: 20px;
 }
+
+
+
+/* FOOTER STARTS HERE */
+
+
+.footer{
+  width: 100%;
+  background-color: #00271d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .content{
+  display: flex;
+  text-decoration: none;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 1250px;
+  justify-content: center;
+}
+.footer .content > div{
+  margin: 10px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.f-left{
+  flex-grow: 5;
+  max-width: 300px;
+}
+.f-right, .f-center{
+  flex-grow: 1;
+  min-width:130px;
+  align-items: center;
+}
+.footer li{
+  list-style: none;
+}
+.footer li a{
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.footer li a:hover{
+  color: #20EBA8;
+}
+.footer li a:hover ~ .footer li i{
+  color: #20EBA8;
+}
+.f-right ul li a{
+  padding-left: 5px;
+}
+
+
+/* RESPONSIVE CSS */
+
+
 @media (max-width: 980px) {
   .content{
     padding: 0 30px;
@@ -254,6 +326,15 @@
     color: white;
     padding: 10px;
   }
+  
+
+
+  .footer .content{
+    flex-wrap: wrap;
+  }
+  .f-left{
+    max-width: 100%;
+  }
 }
 @media (max-width: 450px) {
   .banner{
@@ -261,7 +342,9 @@
     padding:0px 0px;
   }
   .banner-left{
+    width:100vh;
     text-align: center;
+    align-items: center;
   }
   .banner-left h2{
     font-size:20px;
